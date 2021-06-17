@@ -69,6 +69,12 @@ body .grid .cardLogo {
   border-top-right-radius: 7rem;
 }
 
+@media screen and (min-width: 64rem) {
+  body .grid .cardLogo {
+    padding: 3rem 6rem 3rem 3rem;
+  }
+}
+
 body .grid .cardLogo .imgWrapper {
   display: -ms-grid;
   display: grid;
@@ -197,7 +203,7 @@ body .grid .cardStatus .overlay {
     -webkit-transform: unset;
             transform: unset;
     right: 2rem;
-    top: -2.5rem;
+    top: -3.5rem;
   }
   body .grid .cardStatus .overlay::after {
     position: absolute;
