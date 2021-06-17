@@ -159,16 +159,16 @@ body {
           transform: unset;
           right: 2rem;
           top: -2.5rem;
-        }
-
-        &::after {
-          position: absolute;
-          content: "";
-          bottom: -19px;
-          right: 0;
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-right: 20px solid white;
+          
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: -19px;
+            right: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid white;
+          }
         }
 
         span {

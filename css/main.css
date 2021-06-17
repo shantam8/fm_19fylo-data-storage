@@ -199,16 +199,15 @@ body .grid .cardStatus .overlay {
     right: 2rem;
     top: -2.5rem;
   }
-}
-
-body .grid .cardStatus .overlay::after {
-  position: absolute;
-  content: "";
-  bottom: -19px;
-  right: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid white;
+  body .grid .cardStatus .overlay::after {
+    position: absolute;
+    content: "";
+    bottom: -19px;
+    right: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+  }
 }
 
 body .grid .cardStatus .overlay span {
