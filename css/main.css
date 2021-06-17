@@ -136,23 +136,34 @@ body .grid .cardStatus .flex {
 }
 
 body .grid .cardStatus .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
   position: absolute;
-  border: 1px solid red;
-  text-transform: uppercase;
+  padding: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   background-color: white;
   border-radius: 12px;
-  padding: 1rem 2rem;
+  color: black;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body .grid .cardStatus .overlay span {
+  font-size: 2.5rem;
   color: black;
 }
 
 body .grid .cardStatus .overlay p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #848794;
-}
-
-body .grid .cardStatus .overlay p span {
-  font-size: 3rem;
-  color: black;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */
