@@ -23,8 +23,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-image: url("../images/bg-mobile.png");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-size: 100% 50%;
+    background-position: bottom;
+    background-color: #0c122c;
+  }
 }
 
 body .grid {
@@ -32,6 +41,17 @@ body .grid {
   display: grid;
   place-items: center;
   gap: 1rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body .grid {
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+    gap: 2em;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
 }
 
 body .grid .cardLogo {
@@ -86,6 +106,7 @@ body .grid .cardLogo #imgUpl {
 
 body .grid .cardStatus {
   position: relative;
+  height: 11rem;
   width: 100%;
   padding: 2rem;
   background-color: #1d2c67;
@@ -93,6 +114,18 @@ body .grid .cardStatus {
   font-size: 0.875rem;
   text-align: center;
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  body .grid .cardStatus {
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body .grid .cardStatus p {
+    text-align: left;
+  }
 }
 
 body .grid .cardStatus .bar {
@@ -136,6 +169,7 @@ body .grid .cardStatus .flex {
 }
 
 body .grid .cardStatus .overlay {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,6 +179,7 @@ body .grid .cardStatus .overlay {
   gap: 0.5rem;
   position: absolute;
   padding: 1rem;
+  bottom: -2.5rem;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -153,6 +188,27 @@ body .grid .cardStatus .overlay {
   color: black;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+  body .grid .cardStatus .overlay {
+    left: unset;
+    bottom: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    right: 2rem;
+    top: -2.5rem;
+  }
+}
+
+body .grid .cardStatus .overlay::after {
+  position: absolute;
+  content: "";
+  bottom: -19px;
+  right: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
 }
 
 body .grid .cardStatus .overlay span {
